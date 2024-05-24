@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<style>
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button1 {background-color: #008CBA;} /* Blue */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #008CBA;} /* Blue */
+.button4 {background-color: #008CBA;} /* Blue */
+</style>
+	</head>
+	<body>
+		<h1>Page qui allume la LED correspondante au bouton</h1>
+		<p>Par Jia Peng Xu</p>
+		<button onclick="location.href='{% url 'pageBouton1'%}'" class="button button1">LED1</button>
+		<button onclick="location.href='{% url 'pageBouton2'%}'" class="button button2">LED2</button>
+		<button onclick="location.href='{% url 'pageBouton3'%}'" class="button button3">LED3</button>
+		<button onclick="location.href='{% url 'pageBouton4'%}'" class="button button4">LED4</button>
+		{% if Message%}
+		{{Message}}
+		{% endif%}
+	</body>
+</html>
